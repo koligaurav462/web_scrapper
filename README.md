@@ -55,8 +55,8 @@ pip install -r requirements.txt
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/your-username/bookstore-scraper.git
-   cd bookstore-scraper
+   git clone https://github.com/koligaurav462/web_scraper.git
+   cd web_scraper
    ```
 2. **Create and activate a virtual environment**
 
