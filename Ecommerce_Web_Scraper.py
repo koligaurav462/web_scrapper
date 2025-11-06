@@ -190,10 +190,11 @@ class BookScraper:
         print(f"✓ Saved {len(books_data)} books to database")
     
     def save_to_excel(self, books_data, filename='books_data.xlsx'):
-        """Save scraped data to Excel file"""
+        out_dir = os.path.dirname(os.path.abspath(__file__))
+        out_path = os.path.join(out_dir, filename)
         df = pd.DataFrame(books_data)
-        df.to_excel(filename, index=False)
-        print(f"✓ Saved {len(books_data)} books to {filename}")
+        df.to_excel(out_path, index=False, engine='openpyxl')
+        print(f"✓ Saved {len(books_data)} books to {out_path}")
     
     def get_books_from_db(self, search_query=None, min_price=None, max_price=None, 
                          min_rating=None, category=None):
